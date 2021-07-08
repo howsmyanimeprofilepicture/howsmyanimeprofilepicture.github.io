@@ -9,31 +9,53 @@
 
 </head>
 <body>
-  <section>
-    <details id='R'>
-      <summary>R</summary>    
-      <li class="docsLink">우분투에서 R 개발하기</li>
-    </details>
+  <div id='spc'>
+    <section >
 
-    <details id='GraphQL'>
-      <summary>GraphQL</summary>    
-      <li class="docsLink">ResolverChaining의 이해</li>
-      <li class="docsLink">GraphQL이해하기1</li>
-      <li class="docsLink">GraphQL이해하기2</li>
 
-    </details>
+      <details id='R'>
+        <summary>R</summary>    
+        <li class="docsLink">우분투에서 R 개발하기</li>
+      </details>
+  
+      <details id='GraphQL'>
+        <summary>GraphQL</summary>    
+        <li class="docsLink">ResolverChaining의 이해</li>
+        <li class="docsLink">GraphQL이해하기1</li>
+        <li class="docsLink">GraphQL이해하기2</li>
+  
+      </details>
+      <details id='Redux'>
+        <summary>Redux</summary>    
+        <li class="docsLink">createAsyncThunk</li>
+        <li class="docsLink">ReduxToolkit</li>
+      </details>
 
+      <details id='Flutter'>
+        <summary>Flutter</summary>    
+        <li class="docsLink">Provider패턴의 기초</li>
+        <li class="docsLink">Provider패턴의 리빌드 범위</li>
+        <li class="docsLink">BuildContext</li>
+      </details>
+
+      <details id='React'>
+        <summary>React</summary>    
+        <li class="docsLink">useSelector, React.memo, 리렌더링</li>
+      </details>
+  
     </section>
+  </div>
+    <!-- <p id='hide'>숨기기</p> -->
     <iframe id='docs' src='./main/main.html'> </iframe>
 
   
-  <script>
+  <script >
     document.getElementById('docs').frameBorder =0 ;
     function onClick (e) {
       console.log(e)
       e.preventDefault();
       const dirName = e.target.parentElement.getElementsByTagName('summary')[0].innerText
-      const docsName = e.target.innerText;
+      const docsName = e.target.innerHTML;
       console.log(docsName, 'docsName')
       if ( document.getElementById('docs') ) document.getElementById('docs').remove();
       const newElem = document.createElement('iframe')
@@ -50,6 +72,32 @@
       item.addEventListener('click', onClick)
     }
 
+    // let tempContents = ''
+    // document.getElementById('hide').onclick = (e) => {
+    //   e.preventDefault();
+
+      
+    //   if (document.getElementsByTagName('section')[0]){
+    //     let sect = document.getElementsByTagName('section')[0]
+    //     //console.log(sect.innerHTML)
+    //     tempContents = sect.innerHTML;
+    //     console.log(tempContents)
+    //     sect.remove();
+    //     document.getElementById('docs').style.width = '100vmax'
+    //     //1px #8064a9 solid
+    //     document.getElementById('docs').style.borderLeft = 'none'
+        
+    //   }
+    //   else {
+    //     console.log('d')
+    //     let newSect = document.createElement('section');
+    //     console.log(newSect, tempContents)
+    //     newSect.innerHTML = tempContents;
+    //     document.getElementById('spc').appendChild(newSect);
+    //     document.getElementById('docs').style.width = '80vmax'
+    //     document.getElementById('docs').style.borderLeft = '1px #8064a9 solid'
+    //   }
+    // }
   </script>
 </body>
 </html>

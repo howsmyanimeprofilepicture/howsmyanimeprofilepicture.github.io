@@ -2,7 +2,7 @@
   color: aqua;
   width:90vmax;
   height: 98vh;
-  border-left: 1px black solid;
+  border-left: 1px #8064a9 solid;
   
 }
 
@@ -34,3 +34,10 @@ section{
   padding: 30px;
   padding-left: 60px;
 }
+
+/* 
+#hide {
+  position: fixed;
+  top: 0px;
+  left:30px;
+} */
