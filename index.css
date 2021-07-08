@@ -21,6 +21,10 @@ summary {
   font-size: 16pt;
   cursor: pointer;
 }
+#MyApp {
+  list-style: '💊';
+}
+
 
 
 li {
@@ -34,6 +38,7 @@ section{
   padding: 30px;
   padding-left: 60px;
 }
+
 
 /* 
 #hide {

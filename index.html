@@ -13,36 +13,41 @@
     <section >
 
 
-      <details id='R'>
+      <details>
         <summary>R</summary>    
         <li class="docsLink">우분투에서 R 개발하기</li>
       </details>
   
-      <details id='GraphQL'>
+      <details>
         <summary>GraphQL</summary>    
         <li class="docsLink">ResolverChaining의 이해</li>
         <li class="docsLink">GraphQL이해하기1</li>
         <li class="docsLink">GraphQL이해하기2</li>
   
       </details>
-      <details id='Redux'>
+      <details>
         <summary>Redux</summary>    
         <li class="docsLink">createAsyncThunk</li>
         <li class="docsLink">ReduxToolkit</li>
       </details>
 
-      <details id='Flutter'>
+      <details>
         <summary>Flutter</summary>    
         <li class="docsLink">Provider패턴의 기초</li>
         <li class="docsLink">Provider패턴의 리빌드 범위</li>
         <li class="docsLink">BuildContext</li>
       </details>
 
-      <details id='React'>
+      <details>
         <summary>React</summary>    
         <li class="docsLink">useSelector, React.memo, 리렌더링</li>
       </details>
-  
+      
+      <details>
+        <summary id='MyApp'>My Apps</summary>    
+        <li class="appsLink" id="8000" >Backtest99</li>
+        <li class="appsLink" id="8082">Maru City</li>
+      </details>
     </section>
   </div>
     <!-- <p id='hide'>숨기기</p> -->
@@ -52,18 +57,18 @@
   <script >
     document.getElementById('docs').frameBorder =0 ;
     function onClick (e) {
-      console.log(e)
+      //console.log(e)
       e.preventDefault();
       const dirName = e.target.parentElement.getElementsByTagName('summary')[0].innerText
       const docsName = e.target.innerHTML;
-      console.log(docsName, 'docsName')
+      //console.log(docsName, 'docsName')
       if ( document.getElementById('docs') ) document.getElementById('docs').remove();
       const newElem = document.createElement('iframe')
       newElem.id = 'docs'
       newElem.src = `./docs/${dirName}/${docsName}.html`
       newElem.frameBorder = 0;
       const bod_ = document.getElementsByTagName('body')[0]
-      console.log(bod_)
+      //console.log(bod_)
       bod_.appendChild(newElem)
     }
 
@@ -98,6 +103,24 @@
     //     document.getElementById('docs').style.borderLeft = '1px #8064a9 solid'
     //   }
     // }
+
+
+    let apps = document.getElementsByClassName('appsLink');
+    for (link of apps){
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        let p_ = e.target.id;
+        if ( document.getElementById('docs') ) document.getElementById('docs').remove();
+        const newElem = document.createElement('iframe')
+        newElem.id = 'docs'
+        newElem.src = `http://49.164.19.151:${p_}`
+        newElem.frameBorder = 0;
+        const bod_ = document.getElementsByTagName('body')[0]
+        //console.log(bod_)
+        bod_.appendChild(newElem)
+      })
+
+    }
   </script>
 </body>
 </html>
