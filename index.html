@@ -43,11 +43,11 @@
         <li class="docsLink">useSelector, React.memo, 리렌더링</li>
       </details>
       
-      <details>
+      <!-- <details>
         <summary id='MyApp'>My Apps</summary>    
         <li class="appsLink" id="8000" >Backtest99</li>
         <li class="appsLink" id="8082">Maru City</li>
-      </details>
+      </details> -->
     </section>
   </div>
     <!-- <p id='hide'>숨기기</p> -->
@@ -105,22 +105,22 @@
     // }
 
 
-    let apps = document.getElementsByClassName('appsLink');
-    for (link of apps){
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        let p_ = e.target.id;
-        if ( document.getElementById('docs') ) document.getElementById('docs').remove();
-        const newElem = document.createElement('iframe')
-        newElem.id = 'docs'
-        newElem.src = `http://49.164.19.151:${p_}`
-        newElem.frameBorder = 0;
-        const bod_ = document.getElementsByTagName('body')[0]
-        //console.log(bod_)
-        bod_.appendChild(newElem)
-      })
+    // let apps = document.getElementsByClassName('appsLink');
+    // for (link of apps){
+    //   link.addEventListener('click', e => {
+    //     e.preventDefault();
+    //     let p_ = e.target.id;
+    //     if ( document.getElementById('docs') ) document.getElementById('docs').remove();
+    //     const newElem = document.createElement('iframe')
+    //     newElem.id = 'docs'
+    //     newElem.src = `http://49.164.19.151:${p_}`
+    //     newElem.frameBorder = 0;
+    //     const bod_ = document.getElementsByTagName('body')[0]
+    //     //console.log(bod_)
+    //     bod_.appendChild(newElem)
+    //   })
 
-    }
+    // }
   </script>
 </body>
 </html>
