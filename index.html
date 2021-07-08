@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐶 Hola, Mundo!</title>
+  <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+  <section>
+    <details >
+      <summary>R</summary>    
+      <li class="docsLink">우분투에서 R 개발하기</li>
+    </details>
+
+
+    </section>
+    <iframe id='docs'></iframe>
+
+  
+  <script>
+    document.getElementById('docs').frameBorder =0 ;
+    function onClick (e) {
+      console.log(e)
+      e.preventDefault();
+      const docsName = e.target.innerText;
+      console.log(docsName, 'docsName')
+      if ( document.getElementById('docs') ) document.getElementById('docs').remove();
+      const newElem = document.createElement('iframe')
+      newElem.id = 'docs'
+      newElem.src = `./${docsName}.html`
+      newElem.frameBorder = 0;
+      const bod_ = document.getElementsByTagName('body')[0]
+      console.log(bod_)
+      bod_.appendChild(newElem)
+    }
+
+    const linkList = document.getElementsByClassName('docsLink')
+    for (item of linkList){
+      item.addEventListener('click', onClick)
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+#docs {
+  color: aqua;
+  width:90vmax;
+  height: 99vh;
+  
+}
+
+
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  align-content: flex-end;
+}
+
+summary {
+  list-style: '📁';
+  font-size: 16pt;
+  cursor: pointer;
+}
+
+
+li {
+  list-style: '📃';
+  font-size: 12pt;
+  cursor: pointer;
+}
+
+section{
+  width: 10vmax;
+  padding: 30px;
+  padding-left: 100px;
+}
