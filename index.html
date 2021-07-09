@@ -68,12 +68,14 @@
   </div>
     <!-- <p id='hide'>숨기기</p> -->
     <div id='docs-wrapper'>    
-      <iframe id='docs' src='./main/main.html'> </iframe>
+      <iframe id='docs'> </iframe>
     </div>
 
   
   <script >
     document.getElementById('docs').frameBorder =0 ;
+    document.getElementById('docs').src = './main/main.html'
+
     let $$ = document.getElementById('spc')
     .getElementsByTagName('section')[0].innerHTML;
     
@@ -92,7 +94,7 @@
       newElem.id = 'docs'
       newElem.src = `./docs/${dirName}/${docsName}.html`
       newElem.frameBorder = 0;
-      const bod_ = document.getElementsByTagName('body')[0]
+      const bod_ = document.getElementById('docs-wrapper');
       //console.log(bod_)
       bod_.appendChild(newElem)
     }
