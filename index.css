@@ -1,29 +1,26 @@
 #docs {
-  color: aqua;
-  width:90vmax;
-  height: 98vh;
-  border-left: 1px #8064a9 solid;
-  
+  position:relative ;
+  color: rgb(117, 204, 204);
+  width: calc(100% - 240px);
+  height: 97vh;
+  /* border : 1px black solid; */
+  left:0;
+  z-index: 1;
+  margin-left: 240px;
 }
 
 
 
 body {
-  margin: 1vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  align-content: flex-end;
+  margin: 0;
+
 }
 
 summary {
   list-style: '📁';
   font-size: 16pt;
   cursor: pointer;
-
 }
-
-
 
 
 li {
@@ -32,27 +29,29 @@ li {
   cursor: pointer;
 }
 
+
+
 section{
-  width: 10vmax;
-  padding: 30px;
-  padding-left: 140px;
+  height: 96vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  position:fixed;
+  z-index: 2;
+  border-right : 1px #8064a9 solid;
+  width: 200px;
+  padding-left: 30px;
+  background-color: white;
 }
 
 #appbar {
   display: none;
 }
-/* 
-#hide {
-  position: fixed;
-  top: 0px;
-  left:30px;
-} */
 
 
 @media screen and (max-width: 768px) {
   #appbar {
     top: 0;
-    width: 100%;
+    width: 100vh;
     
     position: fixed;
     display: block;
@@ -60,8 +59,9 @@ section{
     padding: 10px;
     padding-left: 40px;
     background-color: white;
-    z-index: 1;
+    z-index: 2;
   }
+
   #folding {
     list-style: '🍳';
     font-size: 23px;
@@ -78,11 +78,18 @@ section{
     display: none;
   }
   #docs {
+    padding: 0;
+    width: 99.5vw;
     margin-top: 40px;
     border-left: 1px #8064a9 none;
     margin-left: 0;
     padding-left: 0;
-    left: -40px
+    left: 0px;
+    height: 95vh;
+  }
+  #docs-wrapper{
+    padding: 0;
+    margin: 0;
   }
 
   body {
@@ -95,8 +102,4 @@ section{
     align-content: flex-end;
   }
 
-  #docs-wrapper {
-    position: relative;
-    left: -80px;
-  }
 }
