@@ -9,6 +9,15 @@
 
 </head>
 <body>
+  <nav id='appbar'>
+    <details>
+      <summary id='folding'>열기 / 닫기</summary>
+      <div>
+
+      </div>
+    </details>
+  </nav>
+
   <div id='spc'>
     <section >
 
@@ -58,11 +67,20 @@
     </section>
   </div>
     <!-- <p id='hide'>숨기기</p> -->
-    <iframe id='docs' src='./main/main.html'> </iframe>
+    <div id='docs-wrapper'>    
+      <iframe id='docs' src='./main/main.html'> </iframe>
+    </div>
 
   
   <script >
     document.getElementById('docs').frameBorder =0 ;
+    let $$ = document.getElementById('spc')
+    .getElementsByTagName('section')[0].innerHTML;
+    
+    document.getElementById('appbar')
+    .getElementsByTagName('details')[0]
+    .getElementsByTagName('div')[0].innerHTML = $$;
+      //spc엘리먼트에 있는 애들 다 앱바에도 복사해주는 코드임ㅎ
     function onClick (e) {
       //console.log(e)
       e.preventDefault();
@@ -128,6 +146,11 @@
     //   })
 
     // }
+
+
+
+
+
   </script>
 </body>
 </html>
