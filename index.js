@@ -16,6 +16,8 @@ document.getElementById('docs').src = './main/main.html'
   document.getElementById('appbar')
   .getElementsByTagName('details')[0]
   .getElementsByTagName('div')[0].innerHTML = $$;
+  
+
     //spc엘리먼트에 있는 애들 다 앱바에도 복사해주는 코드임ㅎ
   function onClick (e) {
     //console.log(e)
@@ -30,6 +32,8 @@ document.getElementById('docs').src = './main/main.html'
     newElem.frameBorder = 0;
     document.getElementsByTagName('body')[0]
     .appendChild(newElem)
+
+    // document.getElementById('folding').click();
   }
 
   const linkList = document.getElementsByClassName('docsLink')
