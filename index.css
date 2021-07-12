@@ -13,7 +13,7 @@
 
 body {
   margin: 0;
-
+  overflow: hidden;
 }
 
 summary {
@@ -50,9 +50,10 @@ section{
 
 
 @media screen and (max-width: 768px) {
+  
   #appbar {
     top: 0;
-    width: 100vh;
+    width: calc(100vw - 50px);
     
     position: fixed;
     display: block;
@@ -101,6 +102,7 @@ section{
     align-items: flex-start;
     justify-content: space-around;
     align-content: flex-end;
+    overflow: hidden;
   }
 
 
