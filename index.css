@@ -16,10 +16,17 @@ body {
   overflow: hidden;
 }
 
+.main-category {
+  font-size: 24px;
+  list-style: '🥕';
+  margin-left: 2px;
+}
+
 summary {
   list-style: '📁';
   font-size: 16pt;
   cursor: pointer;
+  margin-left: 12px ;
 }
 
 

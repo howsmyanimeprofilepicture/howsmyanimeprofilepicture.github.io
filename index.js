@@ -23,12 +23,14 @@ document.getElementById('docs').src = './main/main.html'
     //console.log(e)
     e.preventDefault();
     const dirName = e.target.parentElement.getElementsByTagName('summary')[0].innerText
+    const parentDirName = e.target.parentElement.parentElement.getElementsByTagName('summary')[0].innerText
+
     const docsName = e.target.innerHTML;
     //console.log(docsName, 'docsName')
     if ( document.getElementById('docs') ) document.getElementById('docs').remove();
     const newElem = document.createElement('iframe')
     newElem.id = 'docs'
-    newElem.src = `./docs/${dirName}/${docsName}.html`
+    newElem.src = `./docs/${parentDirName}/${dirName}/${docsName}.html`
     newElem.frameBorder = 0;
     document.getElementsByTagName('body')[0]
     .appendChild(newElem)
