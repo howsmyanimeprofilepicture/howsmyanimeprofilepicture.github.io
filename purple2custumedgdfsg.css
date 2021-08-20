@@ -1,0 +1,222 @@
+:root {
+    --primary-0 : #00A806 ;
+    --primary-1 : #78FF7C ;
+    --primary-2 : #A81D5A ;
+    --primary-3 : #F55B9F; 
+    --primary-4 : #6D5FFD ;
+    --mint : #010BA8;
+}
+
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    /* color: var(--color1); */
+    line-height: 1.4; 
+    /* 줄간격 태그임 */
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0px;
+  	padding: 20px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+del {
+    color: var(--primary-3);
+    text-decoration-color: blue;
+
+}
+
+a {
+    color: var(--primary-3);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* strong {
+    color: var(--primary-4);
+} */
+
+u {
+    color: var(--primary-3);
+    text-decoration: none;
+}
+
+mark {
+    background-color: #e2ffeb;
+
+    color: var(--primary-4);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+    color: var(--primary-4);
+}
+
+
+/* h1이랑 h2에만 적용되는 옵션 */
+h1 {
+    font-size: 2.25em;
+    line-height: 1.75;
+    padding-left: 7px;
+    left: -7px;
+    border-bottom: 1px solid var(--primary-4);
+    border-left: 10px solid var(--primary-4);
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.5;
+    padding-left: 7px;
+    left: -7px;
+    border-bottom: 1px solid var(--primary-4);
+    border-left: 10px solid var(--primary-4);
+
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: var(--primary-3);
+}
+
+
+
+blockquote {
+    border-left: 2.5px solid var(--primary-4);
+    padding: 0 15px;
+    /* color: #777777; */
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid var(--primary-4);
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: var(--primary-4);
+    color: whitesmoke;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid var(--primary-4);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid var(--primary-4);
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+
+code {
+    background-color: var(--mint);
+    color:white;
+    padding: 0 2px 0 2px;
+}
+/* 코드 펜스 */
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    border: 1px solid var(--primary-4);
+    border-radius: 30px;
+    /* background-color:var(--primary-1); */
+}
+
+
+
+
+.cm-keyword {
+    color: red;
+    font-weight: bold;
+}
+.cm-variable {
+    color: blue;
+    font-weight: bold;
+}
+
+.cm-builtin{
+    color:green;
+    font-weight: bold;
+}
+
+.cm-def {
+    color:blue;
+    font-weight: bold;
+}
+
+.CodeMirror-lines{
+    font-weight: bold;
+    color: black;
+}
+
+
+
+
+hr {
+    height: 0.1px;
+    background-color: var(--primary-4);
+}
