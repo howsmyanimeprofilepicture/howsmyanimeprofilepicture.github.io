@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./test.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="./0.png" alt="d" class="test-set">
+
+  <img src="./1.png" alt="d" class="test-set">
+  <img src="./2.png" alt="d" class="test-set">
+  <img src="./3.png" alt="d" class="test-set">
+  <img src="./4.png" alt="d" class="test-set">
+  <img src="./5.png" alt="d" class="test-set">
+  <img src="./6.png" alt="d" class="test-set">
+  <img src="./7.png" alt="d" class="test-set">
+  <img src="./8.png" alt="d" class="test-set">
+  <img src="./9.png" alt="d" class="test-set">
+
+  <input type="button" value="0"><br/>
+  <input type="button" value="1"><br/>
+  <input type="button" value="2"><br/>
+  <input type="button" value="3"><br/>
+  <input type="button" value="4"><br/>
+  <input type="button" value="5"><br/>
+  <input type="button" value="6"><br/>
+  <input type="button" value="7"><br/>
+  <input type="button" value="8"><br/>
+  <input type="button" value="9"><br/>
+
+  <script>
+    const inputList = document.getElementsByTagName('input')
+    
+
+
+    for(let input of inputList){
+      input.addEventListener('click', (e) => {
+        console.log('클릭')
+        e.preventDefault();
+        temp = parseInt(e.target.value);
+        console.log(temp);
+        console.log(document.getElementsByClassName('test-set'));
+        console.log(document.getElementsByClassName('test-set')[temp].style);
+        style_ = document.getElementsByClassName('test-set')[temp].style
+        style_.opacity = '30%'
+        style_.display = style_.display=== 'none' ? 'block' : 'none'
+        e.target.style.color = e.target.style.color==='red'? 'black' : 'red'
+      })
+    }
+
+    
+  </script>
+</body>
+</html>

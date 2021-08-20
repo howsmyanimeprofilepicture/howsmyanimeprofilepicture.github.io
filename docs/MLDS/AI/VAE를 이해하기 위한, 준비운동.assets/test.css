@@ -1,0 +1,12 @@
+.test-set {
+  position: fixed;
+  width: 100px;
+  opacity: 15%;
+  left : 50px;
+  display: block;
+  image-rendering: pixelated;
+}
+
+body {
+  background-color: rgb(219, 255, 241);
+}
