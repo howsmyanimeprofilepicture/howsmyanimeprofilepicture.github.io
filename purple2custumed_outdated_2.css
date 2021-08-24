@@ -326,10 +326,8 @@ h6 {
 
 
 blockquote {
-    border: 1px solid var(--primary-3);
-    border-left: 4.5px solid var(--primary-3);
+    border-left: 2.5px solid var(--primary-4);
     padding: 0 15px;
-    
     /* color: #777777; */
 }
 blockquote blockquote {
@@ -346,8 +344,8 @@ table tr {
 }
 table tr:nth-child(2n),
 thead {
-    background-color: rgba(0, 255, 149, 0.137);
-    color: rgb(0, 0, 0);
+    background-color: var(--primary-4);
+    color: whitesmoke;
 }
 table th {
     font-weight: bold;
