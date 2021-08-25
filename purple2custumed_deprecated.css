@@ -328,8 +328,8 @@ h6 {
 blockquote {
     border: 1px solid var(--primary-3);
     border-left: 4.5px solid var(--primary-3);
-
     padding: 0 15px;
+    
     /* color: #777777; */
 }
 blockquote blockquote {
@@ -394,8 +394,6 @@ code {
     padding-top: 8px;
     padding-bottom: 6px;
     border: 1px solid var(--primary-4);
-    border-left: 4.5px solid var(--primary-4);
-
     /* border-radius: 30px; */
     /* background-color:var(--primary-1); */
 }
