@@ -379,6 +379,12 @@ table td:last-child {
     border-top: 1px solid #eef2f2;
 }
 
+/* 이거 자꾸 XXXX표시 나서 넣음 */
+.CodeMirror-measure{
+  display: none;
+}
+/* 이거 자꾸 XXXX표시 나서 넣음 */
+
 
 code {
     background-color: #00ff6221;
